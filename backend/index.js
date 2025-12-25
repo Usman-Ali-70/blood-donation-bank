@@ -13,7 +13,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://blood-donation-bank-r68g.vercel.app/",
+  origin: "https://blood-donation-bank-r68g.vercel.app",
   credentials: true,
 }));
 app.use(express.json());
