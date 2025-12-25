@@ -23,7 +23,7 @@ const donorSchema = new mongoose.Schema(
       type: String,
       required: [true, "Password is required"],
       minlength: 6,
-      select: false, // 🔒 never returned in queries
+      select: false, 
     },
 
     phone: {
@@ -36,14 +36,14 @@ const donorSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
-      index: true, // ⚡ faster searching
+      index: true, 
     },
 
     city: {
       type: String,
       required: true,
       trim: true,
-      index: true, // ⚡ faster searching
+      index: true, 
     },
 
     availability: {
@@ -68,11 +68,11 @@ const donorSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // createdAt & updatedAt
+    timestamps: true, 
   }
 );
 
-/* Prevent duplicate model compilation */
+
 const Donor = mongoose.models.Donor || mongoose.model("Donor", donorSchema);
 
 export default Donor;

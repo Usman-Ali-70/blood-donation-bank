@@ -11,18 +11,18 @@ connectDB();
 
 const app = express();
 
-/* Middlewares */
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/donors", donorRoutes);
 
-/* Health Check */
+
 app.get("/", (req, res) => {
   res.json({ message: "Blood Donation Bank API is running" });
 });
 
-/* Error Handler */
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;

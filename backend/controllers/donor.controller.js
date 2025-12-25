@@ -1,8 +1,6 @@
 import Donor from "../models/Donor.js";
 
-/* =========================
-   GET OWN PROFILE
-========================= */
+
 export const getMyProfile = async (req, res, next) => {
   try {
     res.json({
@@ -14,9 +12,7 @@ export const getMyProfile = async (req, res, next) => {
   }
 };
 
-/* =========================
-   UPDATE PROFILE
-========================= */
+
 export const updateProfile = async (req, res, next) => {
   try {
     const updates = req.body;
@@ -36,9 +32,7 @@ export const updateProfile = async (req, res, next) => {
   }
 };
 
-/* =========================
-   SEARCH DONORS
-========================= */
+
 export const searchDonors = async (req, res, next) => {
   try {
     const { city, bloodGroup } = req.query;
@@ -62,9 +56,7 @@ export const searchDonors = async (req, res, next) => {
   }
 };
 
-/* =========================
-   DELETE DONOR (ADMIN)
-========================= */
+
 export const deleteDonor = async (req, res, next) => {
   try {
     const donor = await Donor.findById(req.params.id);
