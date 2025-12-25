@@ -28,12 +28,9 @@ export default function Home() {
         </p>
 
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-  <motion.div
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
->
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
   <Link
-    href="/search"
+    to="/search"
     className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-semibold rounded-xl shadow-xl transition"
   >
     <Search className="w-6 h-6" />
@@ -41,12 +38,9 @@ export default function Home() {
   </Link>
 </motion.div>
 
-<motion.div
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
->
+<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
   <Link
-    href="/register"
+    to="/register"
     className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 dark:from-gray-800 dark:to-gray-700 hover:from-red-700 hover:to-pink-700 dark:hover:from-gray-700 dark:hover:to-gray-600 text-white dark:text-white font-semibold rounded-xl shadow-xl transition"
   >
     <Heart className="w-6 h-6 text-white dark:text-red-400 fill-current" />

@@ -1,9 +1,12 @@
+// main.jsx
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom"; 
 import App from "./App.jsx";
 import "./index.css";
 import { initTheme } from "./utils/theme.js";
 
+// Initialize your theme
 initTheme();
 
 const rootElement = document.getElementById("root");
@@ -12,9 +15,13 @@ if (rootElement) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </StrictMode>
   );
 } else {
-  console.error("Root element not found. Please ensure <div id='root'></div> exists in index.html");
+  console.error(
+    "Root element not found. Please ensure <div id='root'></div> exists in index.html"
+  );
 }
