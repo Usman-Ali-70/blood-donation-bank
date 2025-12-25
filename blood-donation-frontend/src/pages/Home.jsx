@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplet, Heart, Users, Search, MapPin, Phone } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -28,25 +28,31 @@ export default function Home() {
         </p>
 
     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-  <motion.a
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
+  <motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Link
     href="/search"
     className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-semibold rounded-xl shadow-xl transition"
   >
     <Search className="w-6 h-6" />
     Find Donors Now
-  </motion.a>
+  </Link>
+</motion.div>
 
-  <motion.a
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
+<motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Link
     href="/register"
     className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 dark:from-gray-800 dark:to-gray-700 hover:from-red-700 hover:to-pink-700 dark:hover:from-gray-700 dark:hover:to-gray-600 text-white dark:text-white font-semibold rounded-xl shadow-xl transition"
   >
     <Heart className="w-6 h-6 text-white dark:text-red-400 fill-current" />
     Become a Donor
-  </motion.a>
+  </Link>
+</motion.div>
 </div>
       </motion.section>
 
